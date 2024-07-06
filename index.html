@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Productos</title>
+    <link rel="icon" href="./head/bx-cart.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+    <nav>
+        <img src="./head/bx-cart-alt.svg" alt="shopping cart" class="img-cart" />
+        <div class="buscador-icon" id="desplegable-nav">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <div id="ocultar" class="ocultar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Opiniones</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>Gestión de Productos</h1>
+    </header>
+    <section class="primera-section">
+        <input type="text" id="search-input" placeholder="Buscar producto" />
+        <a href="#" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </section>    
+    <section class="resultado-section">
+        <p>Resultado:</p>
+        <div id="resultado-contenido"></div> <!-- Contenedor para los resultados -->
+    </section>
+    
+    <section class="segunda-section">
+        <p>Agregar Productos</p>
+        <a href="#"><i class="fa-solid fa-cart-plus" id="carrito-plus"></i></a>
+    </section>
+    <section class="mostrar" id="form-agregar">
+        <div class="form-section">
+            <form class="mostrar">
+                <input type="text" placeholder="Artículo" id="articulo" />
+                <input type="text" placeholder="Categoría" id="categoria" />
+                <input type="number" placeholder="Precio" id="precio" />
+                <input type="number" placeholder="Stock" id="stock">
+                <div class="nav-imagenes">
+                    <input type="file" />
+                    <i class="fa-solid fa-image"></i>
+                </div>
+                <button id="submit">Agregar</button>
+                <div id="alerta-form"></div>
+            </form>
+        </div>
+    </section>
+    <div id="texto-agregar"></div>
+    
+    <!-- Botón para calcular el valor total del inventario -->
+    <section class="total-inventario">
+        <button id="calcular-inventario-btn">Calcular Valor Total del Inventario</button>
+        <div id="valor-total-inventario"></div>
+    </section>
+    
+    <!-- Scripts -->
+   
+
+    <!--script navbar-->
+    <script src="./js/navBar.js"></script>
+    <!--java script-->
+    <script src="./js/script.js"></script>
+    <!--validacion del formulario-->
+</body>
+</html>
