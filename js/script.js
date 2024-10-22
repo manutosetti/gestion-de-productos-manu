@@ -27,7 +27,7 @@ document.getElementById("submit").addEventListener("click", function(e) {
 
     let product = new Product(producto, categoria, precio, stock);
     productos.push(product);
-    localStorage.setItem("productos", JSON.stringify(productos)); // Guardar en localStorage
+    localStorage.setItem("productos", JSON.stringify(productos));
     anadirALista(product);
     limpiarInputs();
 });
@@ -51,7 +51,7 @@ function anadirALista(product) {
         let i = productos.findIndex(p => p.producto === product.producto);
         if (i > -1) {
             productos.splice(i, 1);
-            localStorage.setItem("productos", JSON.stringify(productos)); // Actualizar localStorage
+            localStorage.setItem("productos", JSON.stringify(productos));
         }
         element.remove();
     });
@@ -62,7 +62,7 @@ function anadirALista(product) {
             let i = productos.findIndex(p => p.producto === product.producto);
             if (i > -1) {
                 productos[i].stock = nuevoStock;
-                localStorage.setItem("productos", JSON.stringify(productos)); // Actualizar localStorage
+                localStorage.setItem("productos", JSON.stringify(productos)); 
             }
         }
     });
@@ -106,8 +106,8 @@ function buscarPorCategoria(categoria) {
                 if (!isNaN(nuevoStock)) {
                     let i = productos.findIndex(p => p.producto === product.producto);
                     if (i > -1) {
-                        productos[i].stock = nuevoStock;  // Actualizar el stock en el array
-                        localStorage.setItem("productos", JSON.stringify(productos)); // Actualizar localStorage
+                        productos[i].stock = nuevoStock; 
+                        localStorage.setItem("productos", JSON.stringify(productos)); 
                     }
                 }
             });
