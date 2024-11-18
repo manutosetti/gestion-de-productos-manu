@@ -128,7 +128,6 @@ document.getElementById("calcular-inventario-btn").addEventListener("click", fun
     calcularValorTotalInventario();
 });
 
-// Cargar productos al iniciar la página
 document.addEventListener("DOMContentLoaded", () => {
     productos.forEach(product => anadirALista(product));
     console.log("Productos cargados desde localStorage");
